@@ -15,6 +15,7 @@ class CategoryViewModel extends GetxController {
   @override
   void onInit() {
     getAllCategories();
+    // getCategoryById
     super.onInit();
   }
 
@@ -36,7 +37,7 @@ class CategoryViewModel extends GetxController {
     isLoading.value = false;
   }
   getCategoryById(int id) async{
-    var response = await serviceApi.postAppWithToken(url: ConstantUri.adminGetCategoryByIdPath+"${id}", body: jsonEncode(BaseRequest().toString()));
+    var response = await serviceApi.postAppWithToken(url: ConstantUri.adminGetCategoryByIdPath+"${id}", body: jsonEncode(BaseRequest().toJson()));
     if(response != null){
       var appRes = AppApiResponse.fromJson(jsonDecode(response));
       if(appRes.data != null){
@@ -45,4 +46,5 @@ class CategoryViewModel extends GetxController {
       }
     }
   }
+
 }

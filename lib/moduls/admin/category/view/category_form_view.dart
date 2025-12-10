@@ -1,51 +1,3 @@
-// import 'package:e_commerce_app/moduls/admin/category/view_model/category_form_view_model.dart';
-// import 'package:e_commerce_app/widgets/button_custom_widget.dart';
-// import 'package:e_commerce_app/widgets/input_custom_widget.dart';
-// import 'package:flutter/material.dart';
-// import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-// import 'package:get/get.dart';
-// class CategoryFormView extends StatelessWidget {
-//   const CategoryFormView({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     var viewModel = Get.put(CategoryFormViewModel());
-//     return Obx((){
-//       return  Scaffold(
-//         backgroundColor: Colors.white,
-//         appBar: AppBar(
-//           backgroundColor: Colors.blue,
-//           iconTheme: IconThemeData(
-//               color: Colors.white
-//           ),
-//           title: Text("Create Category",style: TextStyle(color: Colors.white),),
-//         ),
-//         body: SingleChildScrollView(
-//           child: Column(
-//             mainAxisAlignment: MainAxisAlignment.start,
-//             children: [
-//               InputCustomWidget(
-//                 controller: viewModel.categoryNameController.value;
-//                 labelText: "Category name",
-//                 hintText: "Enter category name",
-//               ),
-//               ButtonCustomWidget(
-//                 onPressed: (){
-//                   if(viewModel.createLoading.value == false){
-//                     viewModel.onCreateCategory();
-//                   }
-//                 },
-//                 onLoading: viewModel.createLoading.value,
-//                 title: "Create",
-//               )
-//             ],
-//           ),
-//         ),
-//       );
-//     });
-//   }
-// }
-//
 
 
 import 'package:e_commerce_app/moduls/admin/category/view_model/category_form_view_model.dart';
@@ -78,7 +30,7 @@ class CategoryFormView extends StatelessWidget {
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               InputCustomWidget(
                 controller: viewModel.categoryNameController.value,

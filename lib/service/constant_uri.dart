@@ -6,5 +6,8 @@ abstract class ConstantUri{
   static  String baseUri = "https://learn-api.cambofreelance.com";
   static String adminCategoryPath ="$baseUri/api/app/category/list";
   static String adminCreateCategoryPath ="$baseUri/api/app/product/category/create";
-  static String adminGetCategoryByIdPath ="$baseUri/api/app/product/category/";
+  // static String adminGetCategoryByIdPath ="$baseUri/api/app/product/category/edit";
+  static String adminGetCategoryByIdPath = "$baseUri/api/app/product/category/";
+  static String adminDeleteCategoryPath = "$baseUri/api/app/category/delete";
+
 }

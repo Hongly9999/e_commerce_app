@@ -59,12 +59,14 @@ class CategoryView extends StatelessWidget {
                               children: [
                                 IconButton(
                                   onPressed: () {
-                                   viewModel.getCategoryById(data.id??0);
+                                    viewModel.getCategoryById(data.id ?? 0);
                                   },
                                   icon: Icon(Icons.edit, color: Colors.blue),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    // viewModel.confirmDelete(data.id ?? 0);
+                                  },
                                   icon: Icon(Icons.delete, color: Colors.red),
                                 ),
                               ],
